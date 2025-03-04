@@ -113,6 +113,15 @@ body {
     width: 25px;
 }
 
+.contact-info li a {
+    text-decoration: none;
+    color: white;
+}
+
+contact-info li a:hover {
+    color: var(--accent-color);
+}
+
 .skills {
     margin-top: 3rem;
 }
@@ -167,8 +176,6 @@ h2 {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--accent-color);
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
 }
