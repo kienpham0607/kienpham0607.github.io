@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --bg-color: #f5f6fa;
+    --gradient-primary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    --gradient-secondary: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --accent-color: #48bb78;
+    --bg-light: #f7fafc;
+    --card-bg: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: var(--bg-light);
+    color: var(--text-primary);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.sidebar {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.profile {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+}
+
+.profile h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0 0.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    margin-top: 2rem;
+    color: white;
+}
+
+.contact-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: white;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    padding: 1rem 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li span {
+    color: white;
+}
+
+.contact-info li:hover {
+    transform: translateX(10px);
+}
+
+.contact-info i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 25px;
+}
+
+.skills {
+    margin-top: 3rem;
+}
+
+.skills h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: white;
+}
+
+.skill-item {
+    margin: 1.5rem 0;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.skill-level {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.skill-bar {
+    height: 100%;
+    background: var(--gradient-secondary);
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+.main-content {
+    padding: 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+section {
+    margin-bottom: 2rem;
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    border-left: 2px solid var(--accent-color);
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: calc(var(--item-index) * 0.1s);
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.timeline-item h3 {
+    color: var(--primary-color);
+}
+
+.company, .institution {
+    color: var(--accent-color);
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
