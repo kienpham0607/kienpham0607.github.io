@@ -146,7 +146,66 @@
                     </div>
                 </div>
             </section>
+
+            <section class="contact-form">
+                <h2>Liên Hệ Với Tôi</h2>
+                <div class="contact-container">
+                    <div class="contact-info-box">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Địa Chỉ</h3>
+                                <p>Hải Dương, Việt Nam</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>trungkienpham0607@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Điện Thoại</h3>
+                                <p>0794172227</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="messageForm" class="contact-form-box">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="senderName" placeholder="Họ và Tên" required>
+                                </div>
+                                <span class="error" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="senderEmail" placeholder="Email" required>
+                                </div>
+                                <span class="error" id="emailError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-comment-alt"></i>
+                                <textarea id="messageContent" placeholder="Nội Dung" rows="5" required></textarea>
+                            </div>
+                            <span class="error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Gửi Tin Nhắn</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
